@@ -1,0 +1,52 @@
+/* cuadrados distribuidos horizontalmente */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+
+
+/* Cuadrados centrados vertical y horizontalmente
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; 
+    gap: 0; 
+}*/
+
+/* Cuadrados a la derecha
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 300px;  
+    width: 100px;   
+    gap: 0;
+    margin-right: 0;
+    padding: 0;
+    margin-left: auto; 
+}
+*/
+.contenedor p {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p.uno {
+    background-color: red;
+}
+p.dos {
+    background-color: green;
+}
+p.tres {
+    background-color: blue;
+}
