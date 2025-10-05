@@ -1,0 +1,118 @@
+
+/* ===== BASE (Escritorio) ===== */
+body {
+    background-color: #94A190; 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+header {
+    background-color: #94A190;
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 15px 0 10px 10px;
+}
+
+
+.holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+nav {
+    background-color: #C0392B;
+    width: 150px;
+    padding: 10px 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 4px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+main {
+    background-color: #F7F2B0;
+    flex: 1;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+main h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+
+aside {
+    background-color: #BFB18C;
+    width: 250px;
+    padding: 10px 20px;
+}
+
+aside h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+
+footer {
+    background-color: #CCC59E;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    /*base tablet*/
+    .holder {
+        flex-direction: column;
+    }
+    nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav, main, aside {
+        width: 100%;
+    }
+    main {
+
+    background-color:antiquewhite;
+}
+
+    nav {
+        background-color: #efda64e5;
+
+    }
+    aside {
+        background-color: rgba(235, 199, 141, 0.66);
+    }
+    footer {
+    background-color: rgba(235, 199, 141, 0.66);
+}
+}
