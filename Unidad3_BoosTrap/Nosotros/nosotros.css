@@ -1,0 +1,102 @@
+/* Imagen tipo card con texto superpuesto */
+nosotros-banner {
+    position: relative; /* Permite colocar texto superpuesto encima de la imagen */
+    margin-bottom: 50px; /* Espacio debajo del banner antes de las tarjetas */
+}
+
+/* Imagen de fondo del banner */
+.nosotros-banner img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 500px; /* Fija una altura proporcional */
+    object-fit: cover; /* Recorta sin deformar la imagen */
+    filter: brightness(0.7); /* Oscurece para que el texto resalte */
+}
+
+/* Texto superpuesto sobre la imagen */
+.nosotros-banner .card-img-overlay {
+    display: flex; /* Permite centrar elementos fácilmente */
+    flex-direction: column; /* Organiza el texto verticalmente */
+    justify-content: center; /* Centra verticalmente el texto */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    padding: 40px; /* Espacio interno */
+}
+
+/* Título principal */
+.nosotros-banner h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Contraste sobre la imagen */
+}
+
+/* Párrafo descriptivo */
+.nosotros-banner p {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    max-width: 800px; /* Limita el ancho del texto */
+    margin-top: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+.integrante {
+    border: none; /* Quita el borde predeterminado */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que sobresalga la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    height: 100%; /* Mantiene el mismo alto dentro de la fila */
+    background-color: #fff; /* Fondo claro */
+}
+
+/* Imagen del integrante */
+.integrante img {
+    height: 400px; /* Tamaño uniforme para todas las fotos */
+    width: 100%;
+    object-fit: cover; /* Recorta sin deformar */
+    transition: transform 0.4s ease; /* Suaviza la animación del hover */
+}
+
+/* Cuerpo de la tarjeta */
+.integrante .card-body {
+    padding: 20px;
+    color: #333;
+}
+
+/* Animación al pasar el mouse */
+.integrante:hover {
+    transform: translateY(-8px) scale(1.03); /* Se levanta y agranda un poco */
+}
+
+.integrante:hover img {
+    transform: scale(1.05); /* Pequeño zoom en la imagen */
+}
+
+
+
+footer {
+    background-color: #212529; /* Mismo tono oscuro que la navbar */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    margin-top: auto; /* Hace que se pegue abajo si la página es corta */
+}
+
+
+
+@media (max-width: 768px) {
+    .nosotros-banner img {
+        height: 300px; /* Reduce el alto del banner */
+    }
+
+    .nosotros-banner h2 {
+        font-size: 2rem;
+    }
+
+    .nosotros-banner p {
+        font-size: 1rem;
+    }
+}

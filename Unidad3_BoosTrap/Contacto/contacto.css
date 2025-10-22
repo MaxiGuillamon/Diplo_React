@@ -1,0 +1,175 @@
+/* --- RESET GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+    background-color: #f8f9fa;
+}
+
+/* --- NAVBAR --- */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* --- PORTADA --- */
+.card-img {
+    height: 70vh;
+    object-fit: cover;
+}
+
+#contacto {
+    background-color: #f8f9fa;
+    /* Fondo gris claro para destacar del resto de la página */
+    padding: 60px 20px;
+    /* Espacio interno: 60px arriba/abajo y 20px a los lados */
+    border-radius: 10px;
+    /* Esquinas redondeadas suaves */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para dar profundidad */
+    max-width: 800px;
+    /* Ancho máximo de la sección (centrada en pantallas grandes) */
+    margin: 60px auto;
+    /* Centra el bloque horizontalmente y le da espacio vertical */
+    box-sizing: border-box;
+    /* Hace que el padding se incluya dentro del ancho total */
+}
+
+/*  TÍTULO  */
+#contacto h2 {
+    color: #212529;
+    /* Gris oscuro para buena lectura */
+    font-weight: bold;
+    /* Negrita para jerarquía visual */
+    text-align: center;
+    /* Centra el título horizontalmente */
+    margin-bottom: 30px;
+    /* Espacio debajo del título */
+}
+
+/*  FORMULARIO  */
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    padding: 10px 15px;
+    /* Espacio interno cómodo */
+    margin-bottom: 15px;
+    /* Espacio entre los campos */
+    border: 1px solid #ced4da;
+    /* Borde gris claro */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de letra legible */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Animación suave al enfocar */
+}
+
+/*  EFECTO CLICK EN UN CAMPO */
+#contacto input:focus, /* Selecciona todos los inputs dentro de #contacto */
+#contacto textarea:focus {
+    border-color: #495057;
+    /* Cambia el color del borde al hacer foco */
+    box-shadow: 0 0 5px rgba(73, 80, 87, 0.3);
+    /* Brillo sutil alrededor */
+    outline: none;
+    /* Quita el borde azul por defecto del navegador */
+}
+
+/* BOTÓN DE ENVÍO  */
+#contacto .btn {
+    background-color: #212529;
+    /* Color principal (gris oscuro) */
+    color: white;
+    /* Texto blanco */
+    padding: 10px 25px;
+    /* Tamaño del botón */
+    border: none;
+    /* Sin borde extra */
+    border-radius: 5px;
+    /* Bordes suaves */
+    cursor: pointer;
+    /* Cambia el cursor al pasar encima */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    /* Animaciones suaves */
+    display: block;
+    /* Hace que el botón sea un bloque */
+    margin: 0 auto;
+    /* Centra el botón */
+}
+
+/*  EFECTO HOVER DEL BOTÓN */
+#contacto .btn:hover {
+    transform: scale(1.05);
+    /* Efecto de agrandamiento al pasar el mouse */
+    background-color: #495057;
+    /* Cambia a gris más claro */
+}
+
+/* ACCESIBILIDAD: ENFOQUE CON TECLADO  */
+#contacto .btn:focus {
+    outline: 3px solid rgba(73, 80, 87, 0.3);
+    /* Borde visible al enfocar con tabulador */
+    outline-offset: 2px;
+    /* Separación del borde respecto al botón */
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 576px) {
+    #contacto {
+        padding: 40px 15px;
+        /* Reduce el espacio interno en pantallas pequeñas */
+        margin: 40px 10px;
+        /* Menos espacio lateral */
+    }
+
+    #contacto h2 {
+        font-size: 22px;
+        /* Título más chico en móviles */
+    }
+}
+
+body {
+    position: relative;
+    /* Necesario para posicionar el pseudo-elemento */
+    min-height: 100vh;
+    /* Asegura que el fondo cubra toda la pantalla */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /* Evita scroll horizontal */
+}
+
+body::before {
+    content: "";
+    /* Crea una capa antes del contenido */
+    position: fixed;
+    /* Se mantiene fija al hacer scroll */
+
+    width: 100%;
+    height: 100%;
+    background-image: url("/Material/Unidad3_BoosTrap/IMG/CARRUSEL_01.png");
+    /* Imagen de fondo */
+    background-size: cover;
+    /* Cubre toda la pantalla */
+    background-position: center;
+    /* Centra la imagen */
+    filter: blur(8px);
+    /* Aplica el efecto difuminado */
+    z-index: -1;
+    /* La pone detrás de todo el contenido */
+}
+
+/* FOOTER */
+footer {
+    width: 100vw;
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

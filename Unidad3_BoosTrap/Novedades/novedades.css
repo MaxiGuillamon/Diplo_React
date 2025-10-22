@@ -1,0 +1,95 @@
+.container h2 {
+    color: #333;
+    /* Título oscuro */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+}
+
+.container p {
+    color: #555;
+    /* Texto gris suave */
+}
+
+/* --- CARRUSEL NOVEDADES --- */
+#carouselNovedades {
+    max-width: 90%;
+    /* Deja márgenes a los costados */
+    margin: 40px auto;
+    /* Centra el carrusel y deja espacio arriba/abajo */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Evita que la imagen sobresalga */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra estética */
+}
+
+/* IMÁGENES DEL CARRUSEL */
+#carouselNovedades img {
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+    height: 450px;
+    /* Altura fija */
+    object-fit: cover;
+    /* Mantiene proporciones sin deformar */
+    object-position: center;
+    /* Centra la imagen vertical y horizontalmente */
+    transition: transform 0.6s ease;
+    /* Animación suave al hacer zoom */
+}
+
+/* EFECTO ZOOM */
+#carouselNovedades .carousel-item:hover img {
+    transform: scale(1.05);
+    /* Leve zoom al pasar el mouse */
+}
+
+/* TEXTO DENTRO DEL CARRUSEL */
+#carouselNovedades .carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    /* Fondo oscuro transparente */
+    padding: 20px;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    bottom: 20px;
+    /* Separa el texto del borde inferior */
+}
+
+/* TÍTULOS Y TEXTOS */
+#carouselNovedades .carousel-caption h5 {
+    font-size: 1.8rem;
+    /* Tamaño del título */
+    font-weight: 600;
+    /* Negrita */
+    color: #fff;
+}
+
+#carouselNovedades .carousel-caption p {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+/*FOOTER */
+footer {
+    width: 100vw;
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    #carouselNovedades img {
+        height: 300px;
+        /* Más bajo en pantallas pequeñas */
+    }
+
+    #carouselNovedades .carousel-caption h5 {
+        font-size: 1.3rem;
+    }
+
+    #carouselNovedades .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}

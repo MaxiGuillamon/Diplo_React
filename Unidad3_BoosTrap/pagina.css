@@ -1,0 +1,80 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/*  NAVBAR  */
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/*  PORTADA */
+.card-img {
+  height: 70vh;
+  object-fit: cover;
+}
+
+/*  CARRUSEL  */
+.carousel-item {
+    margin-top: 30px;   /* espacio arriba */
+    margin-bottom: 30px; /* espacio abajo */
+    border-radius: 10px; /* opcional: bordes redondeados */
+    overflow: hidden;    /* evita que se salga de los bordes redondeados */
+    
+}
+.carousel-item img {
+    height: 400px; /* altura fija para las imágenes del carrusel */
+    object-fit: cover; /* ajusta la imagen para cubrir el área sin distorsionar */
+}
+
+
+/* --- PRODUCTOS --- */
+.producto-card .card-img-top {
+  width: 100%;
+  height: 300px;          /* altura de la caja de la imagen (ajustable) */
+  object-fit: contain;    /* muestra la imagen completa sin recortar */
+  object-position: center center; /* centra la imagen dentro del espacio */
+  background-color: #f8f9fa; /* color de fondo para "rellenar" los espacios */
+  display: block;
+  box-sizing: border-box;
+}
+.producto-card h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.producto-card-text {
+  font-size: 14px;
+}
+.producto-card .card-body {
+  background-color: #e9ecef;
+}
+
+/* ANIMACIÓN TARJETAS*/
+.producto-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* tiempo que hace los cambios */
+  border: none; /*  elimina el borde*/
+  border-radius: 10px; /* hace esquinas redondeadas */
+  overflow: hidden; /* es para que la imagen no sobresalga */
+}
+
+.producto-card:hover {
+  transform: scale(1.05); /* agranda la tarjeta  */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* agrega sombra  */
+}
+/*FOOTER */
+footer {
+  width: 100vw;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
