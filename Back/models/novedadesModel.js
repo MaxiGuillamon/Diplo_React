@@ -18,7 +18,31 @@ async function insertNovedad(obj) {
     }
 }
 
+async function deleteNovedadById(id) {
+    const query = "delete from novedades where id = ?";
+    const rows = await pool.query(query, [id]);
+    return rows;
+}      
+async function getNovedadByID(id) {
+    const query = "select * from novedades where id = ?";
+    const rows = await pool.query(query, [id]);
+    return rows [0];
+}
+async function modificarNovedadById(obj, id) {
+    try {
+        const query = "update novedades set ? where id = ?";
+        const rows = await pool.query(query, [obj, id]);
+        return rows;
+    }   catch (error) {
+        console.log(error);
+        throw error;
+    }   
+}
+
 module.exports = {
     getNovedades,
-    insertNovedad
+    insertNovedad,
+    deleteNovedadById
+    ,getNovedadByID,
+    modificarNovedadById
 };
